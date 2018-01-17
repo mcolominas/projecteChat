@@ -12,12 +12,6 @@
       <ul class="nav navbar-nav">
         <?php paginaActiva(["index.php", ""], $classActive); ?>
         <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute(); ?>">Home</a></li>
-        <?php paginaActiva("index2.php", $classActive); ?>
-        <li <?php echo $classActive ?>><a href="#">About</a></li>
-        <?php paginaActiva("index2.php", $classActive); ?>
-        <li <?php echo $classActive ?>><a href="#">Projects</a></li>
-        <?php paginaActiva("index2.php", $classActive); ?>
-        <li <?php echo $classActive ?>><a href="#">Contact</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <?php paginaActiva("index2.php", $classActive); ?>  
