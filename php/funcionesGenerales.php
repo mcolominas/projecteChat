@@ -1,4 +1,5 @@
 <?php
+  session_start();
   function getURLHost(){
     return $_SERVER['SERVER_NAME']."/";
   }

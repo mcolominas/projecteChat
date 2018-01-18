@@ -1,13 +1,13 @@
-<?php require_once("php/funcionesGenerales.php") ?>
+<?php require_once("php/funcionesGenerales.php"); ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <title>Bootstrap Example</title>
-  <?php require_once("partes/head.php") ?>
+  <?php require_once("partes/head.php"); ?>
 </head>
 <body>
-<?php require_once("partes/cabecera.php") ?>
-<?php require_once("partes/menu.php") ?>
+<?php require_once("partes/cabecera.php"); ?>
+<?php require_once("partes/menu.php"); ?>
   
 <div class="container-fluid">    
   <div class="row content">
@@ -22,7 +22,7 @@
   </div>
 </div>
 
-<?php require_once("partes/pie.php") ?>
+<?php require_once("partes/pie.php"); ?>
 
 </body>
 </html>
