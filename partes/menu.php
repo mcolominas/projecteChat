@@ -12,6 +12,8 @@
       <ul class="nav navbar-nav">
         <?php paginaActiva(["index.php", ""], $classActive);?>
         <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute(); ?>">Home</a></li>
+        <?php paginaActiva("chatroom.php", $classActive);?>
+        <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute().'paginas/chatroom.php'; ?>">Chat Room</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       	<?php if(!isset($_SESSION["usuario"])){ ?>
@@ -39,7 +41,7 @@
                                 <p class="text-left"><strong><?php echo $_SESSION['usuario']['nombre']." ".$_SESSION['usuario']['apellidos']; ?></strong></p>
                                 <p class="text-left small"><?php echo $_SESSION['usuario']['email'] ?></p>
                                 <p class="text-left">
-                                    <a href="#" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
+                                    <a href="<?php echo getURLAbsolute().'paginas/modificar.php'; ?>" class="btn btn-primary btn-block btn-sm">Actualizar Datos</a>
                                 </p>
                             </div>
                         </div>
