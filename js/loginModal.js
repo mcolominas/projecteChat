@@ -1,4 +1,4 @@
-$("#myModal .modal-footer button").click(function(){
+/*$("#myModal .modal-footer button").click(function(){
     var username=$("#myModal input[name=username]").val();
     var password=$("#myModal input[name=password]").val();
     $.post("demo_test_post.asp",
@@ -9,7 +9,7 @@ $("#myModal .modal-footer button").click(function(){
     function(data, status){
         alert("Data: " + data + "\nStatus: " + status);
     });
-});
+});*/
 
 $(document).ready(function(){
     $('.modal-footer button').click(function(){
@@ -21,7 +21,7 @@ $(document).ready(function(){
       var progress = $('.progress');
       var progressBar = $('.progress-bar');
 
-      inputs.attr("disabled", "disabled");
+      //inputs.attr("disabled", "disabled");
 
       button.hide();
 
@@ -44,7 +44,7 @@ $(document).ready(function(){
     }
   });
 
-  $('#myModal').on('hidden.bs.modal', function (e) {
+  /*$('#myModal').on('hidden.bs.modal', function (e) {
     var inputs = $('form input');
     var title = $('.modal-title');
     var progressBar = $('.progress-bar');
@@ -61,16 +61,5 @@ $(document).ready(function(){
         .text("Ok")
         .removeAttr("data-dismiss");
                 
-  });
+  });*/
 });
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
