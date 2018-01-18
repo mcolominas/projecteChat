@@ -31,3 +31,7 @@ footer {
   }
   .row.content {height:auto;} 
 }
+
+body{
+  background-color: #d6d6d6;
+}

@@ -13,8 +13,8 @@
   <div class="row content">
     <div class="col-sm-2 offset-sm-2">
     </div>
-    <div class="col-sm-8 text-center"> 
-      <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+    <div class="well col-sm-8 text-center"> 
+      <form class="form-horizontal" action=" " method="post"  id="contact_form">
         <fieldset>
 
         <!-- Form Name -->
