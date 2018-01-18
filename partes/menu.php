@@ -12,17 +12,20 @@
       <ul class="nav navbar-nav">
         <?php paginaActiva(["index.php", ""], $classActive);?>
         <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute(); ?>">Home</a></li>
-        <?php paginaActiva("chatroom.php", $classActive);?>
-        <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute().'paginas/chatroom.php'; ?>">Chat Room</a></li>
+        <?php if(isset($_SESSION["usuario"])){ ?>
+        	<?php paginaActiva("paginas/chatroom.php", $classActive);?>
+        	<li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute().'paginas/chatroom.php'; ?>">Chat Room</a></li>
+        <?php } ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
       	<?php if(!isset($_SESSION["usuario"])){ ?>
-	        <?php paginaActiva("index2.php", $classActive); ?>  
+	        <?php paginaActiva("index2.php", $classActive); ?>
 	        <li <?php echo $classActive ?>><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesión</a></li>
 	        <?php paginaActiva("paginas/registro.php", $classActive); ?>  
 	        <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute().'paginas/registro.php'; ?>"><span class="glyphicon glyphicon-user"></span> Registro</a></li>
         <?php }else{ ?>
-          <li class="dropdown">
+        	<?php paginaActiva("paginas/modificar.php", $classActive, "dropdown"); ?>  
+          <li <?php echo $classActive ?>>
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 <span class="glyphicon glyphicon-user"></span>
                 <strong><?php echo $_SESSION['usuario']['usuario']; ?></strong>
@@ -111,7 +114,7 @@
   </div><!-- /.modal-dialog -->
 </div>
 <?php
-  function paginaActiva($url, &$variable){
+  function paginaActiva($url, &$variable, $text = ""){
     $urlActual = getCurrentPage();
     $index = strrpos(getCurrentPage(), "?");
     if($index !== false) $urlActual = substr($urlActual, 0, $index);
@@ -125,7 +128,7 @@
         }
       }
     }else{
-      if($urlActual === "/".getURLcartepa().$url) $variable = 'class="active"';
+      if($urlActual === "/".getURLcartepa().$url) $variable = "class='active $text'";
       else $variable = '';
     }
   }
