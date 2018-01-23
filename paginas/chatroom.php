@@ -5,78 +5,217 @@
   <title>Bootstrap Example</title>
   <?php require_once("../partes/head.php") ?>
   <link rel="stylesheet" type="text/css" href="<?php echo getURLAbsolute(); ?>css/chatroom.css">
+  <script src="<?php echo getURLAbsolute(); ?>js/chatroom.js"></script>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
 </head>
 <body>
 <?php require_once("../partes/cabecera.php") ?>
 <?php require_once("../partes/menu.php") ?>
   
 <div class="container-fluid">    
-  <div class="row content">
-  <div class="col-sm-2">
-    </div>
-            
-<div class="well col-sm-8">
-      <div class="row">
-        <div class="col-lg-3">
-            <div class="btn-panel btn-panel-conversation">
-                <a href="" class="btn  col-lg-6 send-message-btn " role="button"><i class="fa fa-search"></i> Search</a>
-                <a href="" class="btn  col-lg-6  send-message-btn pull-right" role="button"><i class="fa fa-plus"></i> New Message</a>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-
-        <div class="conversation-wrap col-lg-3">
-
-            <div class="media conversation">
-                <a class="pull-left" href="#">
-                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 50px; height: 50px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
-                </a>
-                <div class="media-body">
-                    <h5 class="media-heading">Naimish Sakhpara</h5>
-                    <small>Hello</small>
-                </div>
-            </div>
+    <div class="row content">
+        <div class="col-sm-1">
         </div>
 
-
-
-        <div class="message-wrap col-lg-8">
-            <div class="msg-wrap">
-
-                <div class="alert alert-info msg-date">
-                    <strong>Today</strong>
-                </div>
-                <div class="media msg">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" data-src="holder.js/64x64" alt="64x64" style="width: 32px; height: 32px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAACqUlEQVR4Xu2Y60tiURTFl48STFJMwkQjUTDtixq+Av93P6iBJFTgg1JL8QWBGT4QfDX7gDIyNE3nEBO6D0Rh9+5z9rprr19dTa/XW2KHl4YFYAfwCHAG7HAGgkOQKcAUYAowBZgCO6wAY5AxyBhkDDIGdxgC/M8QY5AxyBhkDDIGGYM7rIAyBgeDAYrFIkajEYxGIwKBAA4PDzckpd+322243W54PJ5P5f6Omh9tqiTAfD5HNpuFVqvFyckJms0m9vf3EY/H1/u9vb0hn89jsVj8kwDfUfNviisJ8PLygru7O4TDYVgsFtDh9Xo9NBrNes9cLgeTybThgKenJ1SrVXGf1WoVDup2u4jFYhiPx1I1P7XVBxcoCVCr1UBfTqcTrVYLe3t7OD8/x/HxsdiOPqNGo9Eo0un02gHkBhJmuVzC7/fj5uYGXq8XZ2dnop5Mzf8iwMPDAxqNBmw2GxwOBx4fHzGdTpFMJkVzNB7UGAmSSqU2RoDmnETQ6XQiOyKRiHCOSk0ZEZQcUKlU8Pz8LA5vNptRr9eFCJQBFHq//szG5eWlGA1ywOnpqQhBapoWPfl+vw+fzweXyyU+U635VRGUBOh0OigUCggGg8IFK/teXV3h/v4ew+Hwj/OQU4gUq/w4ODgQrkkkEmKEVGp+tXm6XkkAOngmk4HBYBAjQA6gEKRmyOL05GnR99vbW9jtdjEGdP319bUIR8oA+pnG5OLiQoghU5OElFlKAtCGr6+vKJfLmEwm64aosd/XbDbbyIBSqSSeNKU+HXzlnFAohKOjI6maMs0rO0B20590n7IDflIzMmdhAfiNEL8R4jdC/EZIJj235R6mAFOAKcAUYApsS6LL9MEUYAowBZgCTAGZ9NyWe5gCTAGmAFOAKbAtiS7TB1Ng1ynwDkxRe58vH3FfAAAAAElFTkSuQmCC">
-                    </a>
-                    <div class="media-body">
-                        <small class="pull-right time"><i class="fa fa-clock-o"></i> 12:10am</small>
-
-                        <h5 class="media-heading">Naimish Sakhpara</h5>
-                        <small class="col-lg-10">Arnab Goswami: "Some people close to Congress Party and close to the government had a #secret #meeting in a farmhouse in Maharashtra in which Anna Hazare send some representatives and they had a meeting in the discussed how to go about this all fast and how eventually this will end."</small>
+        <div class="well col-sm-10">
+            <div id="frame">
+                <div id="sidepanel">
+                    <div id="profile">
+                        <div class="wrap">
+                            <img id="profile-img" src="http://emilcarlsson.se/assets/mikeross.png" class="online" alt="" />
+                            <p>Mike Ross</p>
+                            <i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+                            <div id="status-options">
+                                <ul>
+                                    <li id="status-online" class="active"><span class="status-circle"></span> <p>Online</p></li>
+                                    <li id="status-away"><span class="status-circle"></span> <p>Away</p></li>
+                                    <li id="status-busy"><span class="status-circle"></span> <p>Busy</p></li>
+                                    <li id="status-offline"><span class="status-circle"></span> <p>Offline</p></li>
+                                </ul>
+                            </div>
+                            <div id="expanded">
+                                <label for="twitter"><i class="fa fa-facebook fa-fw" aria-hidden="true"></i></label>
+                                <input name="twitter" type="text" value="mikeross" />
+                                <label for="twitter"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i></label>
+                                <input name="twitter" type="text" value="ross81" />
+                                <label for="twitter"><i class="fa fa-instagram fa-fw" aria-hidden="true"></i></label>
+                                <input name="twitter" type="text" value="mike.ross" />
+                            </div>
+                        </div>
+                    </div>
+                    <div id="search">
+                        <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
+                        <input type="text" placeholder="Search contacts..." />
+                    </div>
+                    <div id="contacts">
+                        <ul>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status online"></span>
+                                    <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Louis Litt</p>
+                                        <p class="preview">You just got LITT up, Mike.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact active">
+                                <div class="wrap">
+                                    <span class="contact-status busy"></span>
+                                    <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Harvey Specter</p>
+                                        <p class="preview">Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status away"></span>
+                                    <img src="http://emilcarlsson.se/assets/rachelzane.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Rachel Zane</p>
+                                        <p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status online"></span>
+                                    <img src="http://emilcarlsson.se/assets/donnapaulsen.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Donna Paulsen</p>
+                                        <p class="preview">Mike, I know everything! I'm Donna..</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status busy"></span>
+                                    <img src="http://emilcarlsson.se/assets/jessicapearson.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Jessica Pearson</p>
+                                        <p class="preview">Have you finished the draft on the Hinsenburg deal?</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status"></span>
+                                    <img src="http://emilcarlsson.se/assets/haroldgunderson.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Harold Gunderson</p>
+                                        <p class="preview">Thanks Mike! :)</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status"></span>
+                                    <img src="http://emilcarlsson.se/assets/danielhardman.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Daniel Hardman</p>
+                                        <p class="preview">We'll meet again, Mike. Tell Jessica I said 'Hi'.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status busy"></span>
+                                    <img src="http://emilcarlsson.se/assets/katrinabennett.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Katrina Bennett</p>
+                                        <p class="preview">I've sent you the files for the Garrett trial.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status"></span>
+                                    <img src="http://emilcarlsson.se/assets/charlesforstman.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Charles Forstman</p>
+                                        <p class="preview">Mike, this isn't over.</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="contact">
+                                <div class="wrap">
+                                    <span class="contact-status"></span>
+                                    <img src="http://emilcarlsson.se/assets/jonathansidwell.png" alt="" />
+                                    <div class="meta">
+                                        <p class="name">Jonathan Sidwell</p>
+                                        <p class="preview"><span>You:</span> That's bullshit. This deal is solid.</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="bottom-bar">
+                        <button id="addcontact"><i class="fa fa-user-plus fa-fw" aria-hidden="true"></i> <span>Add contact</span></button>
+                        <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
                     </div>
                 </div>
-
-            </div>
-
-            <div class="send-wrap ">
-
-                <textarea class="form-control send-message" rows="3" placeholder="Write a reply..."></textarea>
-
-
-            </div>
-            <div class="btn-panel">
-                <a href="" class=" col-lg-3 btn   send-message-btn " role="button"><i class="fa fa-cloud-upload"></i> Add Files</a>
-                <a href="" class=" col-lg-4 text-right btn   send-message-btn pull-right" role="button"><i class="fa fa-plus"></i> Send Message</a>
+                <div class="content">
+                    <div class="contact-profile">
+                        <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                        <p>Harvey Specter</p>
+                        <div class="social-media">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                             <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="messages">
+                        <ul>
+                            <li class="sent">
+                                <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                                <p>How the hell am I supposed to get a jury to believe you when I am not even sure that I do?!</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>When you're backed against the wall, break the god damn thing down.</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>Excuses don't win championships.</p>
+                            </li>
+                            <li class="sent">
+                                <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                                <p>Oh yeah, did Michael Jordan tell you that?</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>No, I told him that.</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>What are your choices when someone puts a gun to your head?</p>
+                            </li>
+                            <li class="sent">
+                                <img src="http://emilcarlsson.se/assets/mikeross.png" alt="" />
+                                <p>What are you talking about? You do what they say or they shoot you.</p>
+                            </li>
+                            <li class="replies">
+                                <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
+                                <p>Wrong. You take the gun, or you pull out a bigger one. Or, you call their bluff. Or, you do any one of a hundred and forty six other things.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="message-input">
+                        <div class="wrap">
+                        <input type="text" placeholder="Write your message..." />
+                        <i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+                        <button class="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="col-sm-1">
+        </div>
     </div>
-    </div>
-<div class="col-sm-2">
-    </div>
-  </div>
 </div>
 
 <?php require_once("../partes/pie.php") ?>
