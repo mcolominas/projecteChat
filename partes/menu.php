@@ -86,14 +86,14 @@
           <div class="form-group">
             <div class="input-group">
               <input type="text" class="form-control" id="uLogin" name="username" placeholder="Usuario">
-              <label for="uLogin" class="input-group-addon glyphicon glyphicon-user"></label>
+              <label for="uLogin" class="rojologo input-group-addon glyphicon glyphicon-user"></label>
             </div>
           </div> <!-- /.form-group -->
 
           <div class="form-group">
             <div class="input-group">
               <input type="password" class="form-control" id="uPassword" name="password" placeholder="Contraseña">
-              <label for="uPassword" class="input-group-addon glyphicon glyphicon-lock"></label>
+              <label for="uPassword" class="rojologo input-group-addon glyphicon glyphicon-lock"></label>
             </div> <!-- /.input-group -->
           </div> <!-- /.form-group -->
 
@@ -107,7 +107,7 @@
 	      </div> <!-- /.modal-body -->
 
 	      <div class="modal-footer">
-	        <button class="form-control btn btn-primary">Ok</button>
+	        <button class="rojologo form-control btn btn-primary">Iniciar Sessión</button>
 	      </div> <!-- /.modal-footer -->
 	    </form>
     </div><!-- /.modal-content -->
