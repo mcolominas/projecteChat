@@ -15,7 +15,8 @@
         <?php if(isset($_SESSION["usuario"])){ ?>
         	<?php paginaActiva("paginas/chatroom.php", $classActive);?>
         	<li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute().'paginas/chatroom.php'; ?>">Chat Room</a></li>
-          <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute().'paginas/denuncia.php'; ?>">Formulario denuncia</a></li>
+          <?php paginaActiva("paginas/denuncia.php", $classActive);?>
+          <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute().'paginas/denuncia.php'; ?>">Formulario Denuncia</a></li>
         <?php } ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
