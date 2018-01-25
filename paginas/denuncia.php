@@ -17,7 +17,7 @@
     <div class="well col-sm-8 text-center"> 
       <form class="form-horizontal" method="post">
                     <fieldset>
-                        <legend class="text-center header">Contact us</legend>
+                        <legend class="text-center header" id="denunciar">DENUNCIAR</legend>
 
                         <div class="form-group">
                         	<label class="col-md-4 control-label">Nombre</label>  
@@ -59,9 +59,9 @@
                         </div>
 
                         <div class="form-group">
-                            <span class="col-md-1 col-md-offset-2 text-center"><i class="fa fa-pencil-square-o bigicon"></i></span>
+                            <span class="col-md-1 col-md-offset-2 text-center"></span>
                             <div class="col-md-8">
-                                <textarea class="form-control" id="message" name="message" placeholder="Escribe tu mensaje..." rows="7"></textarea>
+                                <textarea class="form-control" id="message" name="message" placeholder="Escribe tu problema..." rows="7"></textarea>
                             </div>
                         </div>
 
@@ -69,6 +69,7 @@
 				         <label class="col-md-4 control-label"></label>
 				         <div class="col-md-4 text-center"><br>
 				         	<button type="submit" class="btn btn-warning" >Enviar <span class="glyphicon glyphicon-send"></span></button>
+				         	<button type="submit" class="btn btn-warning" style="padding: 2px 5px 1px 3px;"><i class="material-icons">add_a_photo</i></button>
 				         </div>
 				        </div>
                     </fieldset>
