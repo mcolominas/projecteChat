@@ -48,3 +48,16 @@ body{
   background-color: #F04E4E !important;
   border-color: red !important;
 }
+.material-icons{
+  vertical-align: middle !important;
+  font-size: 24px !important;
+}
+.icon-google-1-5{
+  font-size: 36px;
+}
+.icon-google-2{
+  font-size: 48px;
+}
+.no-top{
+  top: 0px !important;
+}

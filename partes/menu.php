@@ -22,7 +22,7 @@
       <ul class="nav navbar-nav navbar-right">
       	<?php if(!isset($_SESSION["usuario"])){ ?>
 	        <?php paginaActiva("index2.php", $classActive); ?>
-	        <li <?php echo $classActive ?>><a href="#" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesión</a></li>
+	        <li <?php echo $classActive ?>><a href="#" data-toggle="modal" data-target="#modalLogin"><span class="glyphicon glyphicon-log-in"></span> Iniciar Sesión</a></li>
 	        <?php paginaActiva("paginas/registro.php", $classActive); ?>  
 	        <li <?php echo $classActive ?>><a href="<?php echo getURLAbsolute().'paginas/registro.php'; ?>"><span class="glyphicon glyphicon-user"></span> Registro</a></li>
         <?php }else{ ?>
@@ -74,7 +74,7 @@
 
 
 <!-- Menu login modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
