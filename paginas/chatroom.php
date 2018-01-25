@@ -186,7 +186,7 @@
 
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title" id="myModalLabel">Opciones</h4>
+        <h4 class="modal-title" id="myModalLabel">Nuevo grupo</h4>
       </div> <!-- /.modal-header -->
 
       <div class="modal-body">
@@ -221,14 +221,14 @@
           </div> <!-- /.form-group -->
           <div class="form-group">
             <div class="input-group">
-              <label for="fimagenGrupo"><i class="rojologo no-top input-group-addon glyphicon glyphicon-user" style="display: inline;"></i> Imagen del Grupo</label>
-              <input type="file" style="margin-top: 5px;" class="form-group" class="form-control" id="fimagenGrupo" name="nombreGrupo" placeholder="Nombre del grupo">
+              <label for="fimagenGrupo"><i class="rojologo no-top input-group-addon glyphicon glyphicon-user" style="display: inline;"></i> <span class="modal-title" style="font-weight: normal;">Imagen del Grupo</span></label>
+              <input type="file" style="display: none" class="form-group" class="form-control" id="fimagenGrupo" name="nombreGrupo" placeholder="Nombre del grupo">
             </div>
           </div> <!-- /.form-group -->
       </div> <!-- /.modal-body -->
 
       <div class="modal-footer">
-        <button class="rojologo form-control btn btn-primary">Guardar</button>
+        <button class="rojologo form-control btn btn-primary">Crear nuevo grupo</button>
       </div> <!-- /.modal-footer -->
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
@@ -237,13 +237,15 @@
 <?php require_once("../partes/pie.php") ?>
 <script>
     document.getElementById("fimagenGrupo").addEventListener("input", function(){
+        var filename = $("#fimagenGrupo").val()
+        var fileNameIndex = filename.lastIndexOf("/") + 1;
+        if(fileNameIndex == 0)
+            fileNameIndex = filename.lastIndexOf("\\") + 1;
 
-var imgPath = $("#fimagenGrupo").val()
-var fileNameIndex = imgPath.lastIndexOf("/") + 1;
-var filename = imgPath.substr(fileNameIndex);
+        if(fileNameIndex > 0)
+            filename = filename.substr(fileNameIndex);
 
-
-        alert(filename);
+        $("label[for='fimagenGrupo'] span").text(filename);
     })
     
 </script>
