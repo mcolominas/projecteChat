@@ -12,14 +12,14 @@
 });*/
 
 $(document).ready(function(){
-    $('.modal-footer button').click(function(){
+    $('#modalLogin .modal-footer button').click(function(){
     var button = $(this);
 
     if ( button.attr("data-dismiss") != "modal" ){
-      var inputs = $('form input');
-      var title = $('.modal-title');
-      var progress = $('.progress');
-      var progressBar = $('.progress-bar');
+      var inputs = $('#modalLogin form input');
+      var title = $('#modalLogin .modal-title');
+      var progress = $('#modalLogin .progress');
+      var progressBar = $('#modalLogin .progress-bar');
 
       //inputs.attr("disabled", "disabled");
 

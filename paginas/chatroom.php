@@ -27,7 +27,6 @@
                         <ul>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status online"></span>
                                     <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Louis Litt</p>
@@ -37,7 +36,6 @@
                             </li>
                             <li class="contact active">
                                 <div class="wrap">
-                                    <span class="contact-status busy"></span>
                                     <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Harvey Specter</p>
@@ -47,7 +45,6 @@
                             </li>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status away"></span>
                                     <img src="http://emilcarlsson.se/assets/rachelzane.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Rachel Zane</p>
@@ -57,7 +54,6 @@
                             </li>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status online"></span>
                                     <img src="http://emilcarlsson.se/assets/donnapaulsen.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Donna Paulsen</p>
@@ -67,7 +63,6 @@
                             </li>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status busy"></span>
                                     <img src="http://emilcarlsson.se/assets/jessicapearson.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Jessica Pearson</p>
@@ -77,7 +72,6 @@
                             </li>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status"></span>
                                     <img src="http://emilcarlsson.se/assets/haroldgunderson.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Harold Gunderson</p>
@@ -87,7 +81,6 @@
                             </li>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status"></span>
                                     <img src="http://emilcarlsson.se/assets/danielhardman.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Daniel Hardman</p>
@@ -97,7 +90,6 @@
                             </li>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status busy"></span>
                                     <img src="http://emilcarlsson.se/assets/katrinabennett.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Katrina Bennett</p>
@@ -107,7 +99,6 @@
                             </li>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status"></span>
                                     <img src="http://emilcarlsson.se/assets/charlesforstman.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Charles Forstman</p>
@@ -117,7 +108,6 @@
                             </li>
                             <li class="contact">
                                 <div class="wrap">
-                                    <span class="contact-status"></span>
                                     <img src="http://emilcarlsson.se/assets/jonathansidwell.png" alt="" />
                                     <div class="meta">
                                         <p class="name">Jonathan Sidwell</p>
@@ -128,18 +118,15 @@
                         </ul>
                     </div>
                     <div id="bottom-bar">
-                        <button id="addcontact"><i class="material-icons">group_add</i> <span>Nuevo Grupo</span></button>
-                        <button id="settings"><i class="fa fa-cog fa-fw" aria-hidden="true"></i> <span>Settings</span></button>
+                        <button id="addcontact" data-toggle="modal" data-target="#nuevoGrupo"><i class="material-icons icon-google-1-5">group_add</i> <span>Nuevo Grupo</span></button>
                     </div>
                 </div>
                 <div class="content">
                     <div class="contact-profile">
                         <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
                         <p>Harvey Specter</p>
-                        <div class="social-media">
-                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                             <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <div class="setting">
+                             <a href="#" data-toggle="modal" data-target="#opcionesChatroom"><i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="messages">
@@ -192,7 +179,73 @@
     </div>
 </div>
 
-<?php require_once("../partes/pie.php") ?>
+<!-- Opciones modal -->
+<div class="modal fade" id="opcionesChatroom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">Opciones</h4>
+      </div> <!-- /.modal-header -->
+
+      <div class="modal-body">
+        
+
+      </div> <!-- /.modal-body -->
+
+      <div class="modal-footer">
+        <button class="rojologo form-control btn btn-primary">Guardar</button>
+      </div> <!-- /.modal-footer -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<!-- Nuevo Grupo modal -->
+<div class="modal fade" id="nuevoGrupo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h4 class="modal-title" id="myModalLabel">Opciones</h4>
+      </div> <!-- /.modal-header -->
+
+      <div class="modal-body">
+        
+          <div class="form-group">
+            <div class="input-group">
+              <label for="fnombreGrupo" class="rojologo no-top input-group-addon glyphicon glyphicon-user"></label>
+              <input type="text" class="form-control" id="fnombreGrupo" name="nombreGrupo" placeholder="Nombre del grupo">
+            </div>
+          </div> <!-- /.form-group -->
+          <div class="form-group">
+            <div class="input-group">
+              <label for="fimagenGrupo"><i class="rojologo no-top input-group-addon glyphicon glyphicon-user" style="display: inline;"></i> Imagen del Grupo</label>
+              <input type="file" style="margin-top: 5px;" class="form-group" class="form-control" id="fimagenGrupo" name="nombreGrupo" placeholder="Nombre del grupo">
+            </div>
+          </div> <!-- /.form-group -->
+      </div> <!-- /.modal-body -->
+
+      <div class="modal-footer">
+        <button class="rojologo form-control btn btn-primary">Guardar</button>
+      </div> <!-- /.modal-footer -->
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div>
+
+<?php require_once("../partes/pie.php") ?>
+<script>
+    document.getElementById("fimagenGrupo").addEventListener("input", function(){
+
+var imgPath = $("#fimagenGrupo").val()
+var fileNameIndex = imgPath.lastIndexOf("/") + 1;
+var filename = imgPath.substr(fileNameIndex);
+
+
+        alert(filename);
+    })
+    
+</script>
 </body>
 </html>
