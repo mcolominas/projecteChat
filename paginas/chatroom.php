@@ -20,8 +20,8 @@
             <div id="frame">
                 <div id="sidepanel">
                     <div id="search">
-                        <label for=""><i class="fa fa-search" aria-hidden="true"></i></label>
-                        <input type="text" placeholder="Search contacts..." />
+                        <label for="buscarGrupos"><i class="fa fa-search" aria-hidden="true"></i></label>
+                        <input type="text" id="buscarGrupos" placeholder="Buscar grupos..." />
                     </div>
                     <div id="contacts">
                         <ul>
@@ -126,7 +126,7 @@
                         <img src="http://emilcarlsson.se/assets/harveyspecter.png" alt="" />
                         <p>Harvey Specter</p>
                         <div class="setting">
-                             <a href="#" data-toggle="modal" data-target="#opcionesChatroom"><i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i></a>
+                             <a href="#" data-toggle="modal" data-target="#linkInvitarModal" style="color:red;"><i class="fa fa-link fa-lg fa-fw" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="messages">
@@ -180,23 +180,26 @@
 </div>
 
 <!-- Opciones modal -->
-<div class="modal fade" id="opcionesChatroom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="linkInvitarModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
 
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title" id="myModalLabel">Nuevo grupo</h4>
+        <h4 class="modal-title" id="myModalLabel">Invita a gente</h4>
       </div> <!-- /.modal-header -->
-
       <div class="modal-body">
-        
-
+        <span>Dona el siguiente enlace para que la gente se una al grupo.</span>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <div class="input-group">
+              <label for="linkInvitar" class="rojologo no-top input-group-addon"><i class="fa fa-clipboard" aria-hidden="true"></i>
+</label>
+              <input type="text" class="form-control" id="linkInvitar" value="https://www.chat.com/join?id=2">
+            </div>
+        </div> <!-- /.form-group -->
       </div> <!-- /.modal-body -->
-
-      <div class="modal-footer">
-        <button class="rojologo form-control btn btn-primary">Guardar</button>
-      </div> <!-- /.modal-footer -->
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div>
@@ -208,20 +211,20 @@
 
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h4 class="modal-title" id="myModalLabel">Opciones</h4>
+        <h4 class="modal-title" id="myModalLabel">Nuevo Grupo</h4>
       </div> <!-- /.modal-header -->
 
       <div class="modal-body">
         
           <div class="form-group">
             <div class="input-group">
-              <label for="fnombreGrupo" class="rojologo no-top input-group-addon glyphicon glyphicon-user"></label>
+              <label for="fnombreGrupo" class="rojologo no-top input-group-addon"><i class="fa fa-pencil"></i></label>
               <input type="text" class="form-control" id="fnombreGrupo" name="nombreGrupo" placeholder="Nombre del grupo">
             </div>
           </div> <!-- /.form-group -->
           <div class="form-group">
             <div class="input-group">
-              <label for="fimagenGrupo"><i class="rojologo no-top input-group-addon glyphicon glyphicon-user" style="display: inline;"></i> <span class="modal-title" style="font-weight: normal;">Imagen del Grupo</span></label>
+              <label for="fimagenGrupo"><i class="rojologo no-top input-group-addon fa fa-file-image-o" style="display: inline;"></i> <span class="modal-title" style="font-weight: normal;">Imagen del Grupo</span></label>
               <input type="file" style="display: none" class="form-group" class="form-control" id="fimagenGrupo" name="nombreGrupo" placeholder="Nombre del grupo">
             </div>
           </div> <!-- /.form-group -->
@@ -246,6 +249,16 @@
             filename = filename.substr(fileNameIndex);
 
         $("label[for='fimagenGrupo'] span").text(filename);
+    })
+    /*document.getElementById("buscarGrupos").addEventListener("input", function(){
+        var contactos = $("#contacts li").each(function(index){
+            alert(this.text.)
+        });
+
+    })*/
+    $("label[for='linkInvitar']").click("input", function(){
+        $("#linkInvitar").select();
+        document.execCommand("Copy");
     })
     
 </script>
