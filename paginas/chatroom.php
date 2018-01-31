@@ -25,6 +25,10 @@
                     </div>
                     <div id="contacts">
                         <ul>
+	                        <li class="separator">
+	                            <img src="<?php echo getURLAbsolute(); ?>img/publicIcon.png">
+	                            <span>Salas publicas</span>
+                            </li>
                             <li class="contact">
                                 <div class="wrap">
                                     <img src="http://emilcarlsson.se/assets/louislitt.png" alt="" />
@@ -51,6 +55,10 @@
                                         <p class="preview">I was thinking that we could have chicken tonight, sounds good?</p>
                                     </div>
                                 </div>
+                            </li>
+	                        <li class="separator">
+	                            <img src="<?php echo getURLAbsolute(); ?>img/privateIcon.png">
+	                            <span>Salas privadas</span>
                             </li>
                             <li class="contact">
                                 <div class="wrap">
